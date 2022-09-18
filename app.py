@@ -75,12 +75,12 @@ def locate_attractions(destination: str, preferences: list) -> list:
         preferences_escaped = "%2C".join(preferences)
 
         url = \
-            f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}&kinds={preferences_escaped} \
+            f"https://api.opentripmap.com/0.1/en/places/radius?radius=900000&lon={long}&lat={lat}&kinds={preferences_escaped} \
             &format=json&limit=50&apikey={APIKey}"
 
     else:
         url = \
-            f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}\
+            f"https://api.opentripmap.com/0.1/en/places/radius?radius=900000&lon={long}&lat={lat}\
                 &format=json&limit=50&apikey={APIKey}"
 
     attractions = requests.get(url)
