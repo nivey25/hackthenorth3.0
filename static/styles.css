@@ -33,7 +33,7 @@ body{
 }
 
 .navbar.navbar-light.bg-light{
-    background-color: #CBF3F0;
+    background-color: #CBF3F0!important;
 }
 .card{
     background-color: #beb6a7;
