@@ -31,7 +31,7 @@ def index():
         days = request.form.get("days")
         startTime = request.form.get("checkInTime")
         endTime = request.form.get("checkOutTime")
-        preferences = request.form.get("preferences")
+        preferences = request.form.getlist("preferences")
 
         # Get attractions data
         attractions = locate_attractions(destination, preferences)
@@ -68,13 +68,15 @@ def locate_destination(destination: str) -> dict:
 
 
 def locate_attractions(destination: str, preferences: list) -> list:
+    print(preferences)
+
     long, lat = locate_destination(destination)["long"], locate_destination(destination)["lat"]
     if preferences:
-        preferences_str = "%2C".join(preferences)
+        preferences_escaped = "%2C".join(preferences)
 
         url = \
-            f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}&kinds={preferences_str} \
-            &format=json&apikey={APIKey}"
+            f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}&kinds={preferences_escaped} \
+            &format=json&limit=50&apikey={APIKey}"
 
     else:
         url = \
