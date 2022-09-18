@@ -29,7 +29,7 @@ def index():
         # get data from form
         destination = request.form.get("destination")
         days = request.form.get("days")
-        startTime = request.form.get("checkInTime")
+        startTime = request.form.get("start")
         endTime = request.form.get("checkOutTime")
         preferences = request.form.getlist("preferences")
         repititions = 0

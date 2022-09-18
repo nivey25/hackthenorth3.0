@@ -24,11 +24,16 @@
 
 
       </div>
+    <div class="wrapper2">
+        <h1>My Trip  to {{ destination }}</h1>
+    </div>
 
-        {{ attractions }}
         {% for i in range(days|int) %}
-            <h1>Day {{ i + 1 }}</h1>
-
+            <div class="wrapper2">
+                <div class="card">
+                    <h2 class="card-title" style="text-align:center;">{{ i + 9 }}:00</h2>
+                </div>
+            </div>
             <div class="wrapper2">
                     <div class="card">
                         <div>
@@ -38,7 +43,8 @@
                         <div>
                             <h5 class="card-title">{{attractions[i]['name']}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Categories: {{ attractions[i]['kinds'] }}</h6>
-                            <p class="card-text"></p>
+                            <p class="card-text">Rating: ....</p>
+                            <p class="card-text">Details: ....</p>
                         </div>
                     </div>
                 </div>
