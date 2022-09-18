@@ -38,11 +38,23 @@ def index():
 
         # TODO Organize list of attractions and add lunch options based on time of day
 
-
-        return render_template("itinerary.html", destination=destination, days=days, startTime=startTime, endTime=endTime, preferences=preferences, attractions=attractions)
+        return render_template("itinerary.html", preferences=preferences, destination=destination, days=days,
+                               startTime=startTime, endTime=endTime,
+                               attractions=attractions)
 
     else:
-        return render_template("index.html")
+
+        preferenceList = ["adult", "amusements",
+                          "architecture",
+                          "cultural",
+                          "historical",
+                          "industrial_facilities",
+                          "natural",
+                          "other",
+                          "religion",
+                          "sport"]
+
+        return render_template("index.html", preferenceList=preferenceList)
 
 
 def locate_destination(destination: str) -> dict:
@@ -66,7 +78,7 @@ def locate_attractions(destination: str, preferences: list) -> list:
 
     else:
         url = \
-           f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}\
+            f"https://api.opentripmap.com/0.1/en/places/radius?radius=90000&lon={long}&lat={lat}\
                 &format=json&limit=50&apikey={APIKey}"
 
     attractions = requests.get(url)
