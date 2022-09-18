@@ -32,6 +32,9 @@ body{
     margin-left: 22px;
 }
 
+.navbar.navbar-light.bg-light{
+    background-color: #CBF3F0;
+}
 .card{
     background-color: #beb6a7;
     border-radius: 0.25cm;
@@ -58,6 +61,7 @@ body{
 
 .card-subtitle.mb-2.text-muted{
     padding:10px;
+    color: #EFF2C0;
 }
 
 .card-text{
@@ -96,8 +100,8 @@ body{
 .wrapper2{
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #CBF3F0;
     width: 100%;
 }
