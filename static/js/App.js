@@ -7,7 +7,7 @@ const checkoutDate = document.querySelector('.form-control-checkout')
 //event listeners
 createPlanBtn.addEventListener('click', (event)=>{
     //prevent form from submitting
-    event.preventDefault()
+    //event.preventDefault()
 })
 
 //preference list
