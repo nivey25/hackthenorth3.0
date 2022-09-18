@@ -24,10 +24,11 @@
 
     <!-- BUTTONS FOR EACH DAY -->
     <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">Day 1</button>
-        <button type="button" class="btn btn-secondary">Day 2</button>
-        <button type="button" class="btn btn-secondary">Day 3</button>
-        <button type="button" class="btn btn-secondary">Day 4</button>
+        {% for day in days %}
+            {% for i in range(day|int) %}
+                <button type="button" class="btn btn-secondary">Day {{ i + 1}}</button>
+            {%  endfor %}
+        {% endfor %}
 
       </div>
 
