@@ -33,34 +33,27 @@
       </div>
 
     <!-- ONE DAY TEMPLATE  -->
-    <div class="wrapper2">
         {% for item in attractions %}
             {% if item["name"] != '' %}
-            <div class="card">
-                <div>
-                    <img class="card-img-top" src="../Images/sampleImage.jpg" alt="Card image cap">
-                </div>
+                <div class="wrapper2">
+                    <div class="card">
+                        <div>
+                            <img class="card-img-top" src="https://www.theactivetimes.com/sites/default/files/2019/02/04/copy/camara-de-lobos-madeira-picture-id467497162.jpg" alt="Card image cap">
+                        </div>
 
-                <div>
-                    <h5 class="card-title">8AM - 9AM</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{item['name']}}</h6>
-                    <p class="card-text">{{ item['kinds'] }}</p>
+                        <div>
+                            <h5 class="card-title">8AM - 9AM</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{item['name']}}</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
             {% endif %}
         {% endfor %}
 
     <div class="wrapper2">
         <div class="card">
-            <div>
-                <img class="card-img-top" src="../Images/sampleImage.jpg" alt="Card image cap">
-            </div>
-            <div>
-                <h5 class="card-title">9AM - 10AM</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Museum of Awesomeness</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+                <h5 class="card-title" style="text-align:center;">End of the Day</h5>
         </div>
     </div>
       
