@@ -13,8 +13,7 @@ createPlanBtn.addEventListener('click', (event)=>{
 //preference list
 const preferenceList = ["Adult", "Amusements", 
 "Architecture", 
-"Cultural", 
-"Historical", 
+"Cultural",3
 "Industrial Facilliites", 
 "Natural", 
 "Other", 

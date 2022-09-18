@@ -22,38 +22,35 @@
     </nav>
 
 
-    <!-- BUTTONS FOR EACH DAY -->
-    <div class="btn-group" role="group" aria-label="Basic example">
-        {% for day in days %}
-            {% for i in range(day|int) %}
-                <button type="button" class="btn btn-secondary">Day {{ i + 1}}</button>
-            {%  endfor %}
-        {% endfor %}
 
       </div>
 
-    <!-- ONE DAY TEMPLATE  -->
-        {% for item in attractions %}
-            {% if item["name"] != '' %}
-                <div class="wrapper2">
+        {{ attractions }}
+        {% for i in range(days|int) %}
+            <h1>Day {{ i + 1 }}</h1>
+
+            <div class="wrapper2">
                     <div class="card">
                         <div>
                             <img class="card-img-top" src="https://www.theactivetimes.com/sites/default/files/2019/02/04/copy/camara-de-lobos-madeira-picture-id467497162.jpg" alt="Card image cap">
                         </div>
 
                         <div>
-                            <h5 class="card-title">8AM - 9AM</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{item['name']}}</h6>
-                            <p class="card-text">Categories: {{ item['kinds'] }}</p>
+                            <h5 class="card-title">{{attractions[i]['name']}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Categories: {{ attractions[i]['kinds'] }}</h6>
+                            <p class="card-text"></p>
                         </div>
                     </div>
                 </div>
-            {% endif %}
-        {% endfor %}
+            {% endfor %}
+
+
+
+
 
     <div class="wrapper2">
         <div class="card">
-                <h5 class="card-title" style="text-align:center;">End of the Day</h5>
+                <h2 class="card-title" style="text-align:center;">End of the Trip</h2>
         </div>
     </div>
       

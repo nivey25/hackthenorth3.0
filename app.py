@@ -32,6 +32,7 @@ def index():
         startTime = request.form.get("checkInTime")
         endTime = request.form.get("checkOutTime")
         preferences = request.form.getlist("preferences")
+        repititions = 0
 
         # Get attractions data
         attractions = locate_attractions(destination, preferences)
@@ -40,14 +41,13 @@ def index():
 
         return render_template("itinerary.html", preferences=preferences, destination=destination, days=days,
                                startTime=startTime, endTime=endTime,
-                               attractions=attractions)
+                               attractions=attractions, repititions=repititions)
 
     else:
 
         preferenceList = ["adult", "amusements",
                           "architecture",
                           "cultural",
-                          "historical",
                           "industrial_facilities",
                           "natural",
                           "other",
