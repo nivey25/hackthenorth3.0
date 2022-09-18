@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <!-- Bootstrap Date-Picker Plugin -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="/path/to/tempusdominus-bootstrap-4.min.css"/>
+
+</head>
+<title>Tripmyway</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand mb-0 h1" href="#">
+            TripMyWay</a>
+    </nav>
+        <div class="wrapper">
+            <form action="/" method="post">
+                <div class="form-group">
+                <label for="formGroupExampleInput">Destination</label>
+                <input type="text" class="form-control" name="destination" id="formGroupExampleInput" placeholder="Enter a destination">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="formGroupExampleInput">Days</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter number of days">
+                </div> -->
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Budget</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your budget">
+                </div>
+                <!-- Days Picker -->
+                <div class="form-row">
+                    <div class="form-group"> <!-- Date input -->
+                        <label class="control-label">Check in</label>
+                        <input class="form-control-checkin" id="checkInDate" name="checkInDate" placeholder="MM/DD/YYY" type="text"/>
+                    </div>
+                    <div class="form-group mx-4"> <!-- Date input -->
+                        <label class="control-label" for="date">Check out</label>
+                        <input class="form-control-checkout" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                    </div> 
+                    </div>
+                  <!--Time picker -->
+                  <div class="form-row">
+                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label class="control-label" for="timepicker">Checkin time</label>
+                        <input type="text" class="form-control" id="timepicker">
+                    </div>
+                    <div class="form-group pmd-textfield pmd-textfield-floating-label mx-4">
+                        <label class="control-label" for="timepicker">Checkout time</label>
+                        <input type="text" class="form-control" id="timepicker">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="checkbox-label">Preferences</label>
+                    <div class="preferences"></div>
+                </div>
+                <button type="submit" class="btn btn-primary create-trip-btn">Create Plan</button>
+            </form>
+    </div>
+</body>
+<script src='../App.js'></script>
+</html>
